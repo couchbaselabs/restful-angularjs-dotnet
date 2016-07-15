@@ -1,15 +1,14 @@
-# Couchbase, ExpressJS, AngularJS, Node.js (CEAN) Stack Example
+# [WIP - do not use this repo yet] Couchbase, WebAPI, AngularJS, .NET Stack Example
 
-A very basic example of a CEAN stack application that makes use of Couchbase Server's N1QL query language.
+A very basic example of a CEAN-type stack application that makes use of Couchbase Server's N1QL query language.
 
-The full stack application separates the Node.js, ExpressJS and Couchbase Server into the back-end and leaves AngularJS, HTML, and CSS as the front-end that requests data from the back-end and presents it to the user.
+The full stack application separates the ASP.NET/WebAPI/Couchbase Server into the back-end and leaves AngularJS, HTML, and CSS as the front-end that requests data from the back-end and presents it to the user.
 
 ## Prerequisites
 
 There are not many prerequisites required to build and run this project, but you'll need the following:
 
-* Node.js
-* Node Package Manager
+* [[ TODO ]]
 * Couchbase Server 4+
 
 ## Installation & Configuration
@@ -28,7 +27,7 @@ This will install all dependencies as defined in the **package.json** file.
 
 ### Database
 
-This project requires Couchbase 4.0 or higher in order to function because it makes use of the N1QL query language.  With Couchbase Server installed, create a new bucket called **restful-sample** or whatever you've named it in your **config.json** file.
+This project requires Couchbase 4.0 or higher in order to function because it makes use of the N1QL query language.  With Couchbase Server installed, create a new bucket called **restful-sample** or whatever you've named it in your App.config file.
 
 We're not done yet.  In order to use N1QL queries in your application you must create a primary index on your bucket.  This can be done by using the Couchbase Query Client (CBQ).
 
@@ -52,22 +51,28 @@ CREATE PRIMARY INDEX ON `restful-sample` USING GSI;
 
 Your database is now ready for use.
 
+If you are using Couchbase 4.5, you can execute this query in the Query Workbench on Couchbase Console.
+
 ## Testing
 
-With all dependencies installed and Couchbase Server configured, run the following from your Command Prompt or Terminal:
+~~With all dependencies installed and Couchbase Server configured, run the following from your Command Prompt or Terminal:~~
 
 ```
-node app.js
+[todo]
 ```
 
-Now when you visit **http://localhost:3000** from your web browser you will be able to use the application.
+~~Now when you visit **http://localhost:3000** from your web browser you will be able to use the application.~~
 
 ## Resources
 
 Couchbase - [http://www.couchbase.com](http://www.couchbase.com)
 
-ExpressJS - [http://www.expressjs.com](http://www.expressjs.com)
+~~ExpressJS - [http://www.expressjs.com](http://www.expressjs.com)~~
 
 AngularJS - [http://www.angularjs.org](http://www.angularjs.org)
 
-Node.js - [http://www.nodejs.org](http://www.nodejs.org)
+~~Node.js - [http://www.nodejs.org](http://www.nodejs.org)~~
+
+ASP.NET - [http://asp.net](http://asp.net)
+
+ASP.NET WebAPI - [http://www.asp.net/web-api](http://www.asp.net/web-api)
