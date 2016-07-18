@@ -40,7 +40,7 @@ namespace RestfulDotnet.Models
             return r.Rows;
         }
 
-        public async Task<IDocumentResult<dynamic>> Save(Person data)
+        public Task<IDocumentResult<dynamic>> Save(Person data)
         {
             var document = new Document<dynamic>
             {
@@ -53,12 +53,9 @@ namespace RestfulDotnet.Models
                 }
             };
 
-            return await _bucket.UpsertAsync(document);
+            return _bucket.UpsertAsync(document);
         }
 
-        public async Task<IOperationResult> Delete(Guid documentId)
-        {
-            return await _bucket.RemoveAsync(documentId.ToString());
-        }
+        public Task<IOperationResult> Delete(Guid documentId) => _bucket.RemoveAsync(documentId.ToString());
     }
 }
