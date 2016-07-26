@@ -49,7 +49,8 @@ namespace RestfulDotnet.Models
                 {
                     firstname = data.FirstName,
                     lastname = data.LastName,
-                    email = data.Email
+                    email = data.Email,
+                    type = "User"
                 }
             };
 
