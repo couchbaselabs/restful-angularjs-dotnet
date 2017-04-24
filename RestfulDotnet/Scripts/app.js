@@ -40,7 +40,6 @@ angular.module("recordsapp", ["ui.router"])
 
     // Look up a document if we landed in the info screen for editing a document
     if ($stateParams.documentId) {
-        debugger;
         $http(
             {
                 method: "GET",
@@ -51,11 +50,9 @@ angular.module("recordsapp", ["ui.router"])
             }
         )
         .success(function (result) {
-                debugger;
             $scope.inputForm = result[0];
         })
         .error(function(error) {
-                debugger;
             console.log(JSON.stringify(error));
         });
     }
